@@ -22,12 +22,10 @@ app.use(
     extended: true,
   })
 );
-const authRoute = require("./routes/auth");
-app.use("/api/user", authRoute);
+
 const artRouter = require("./routes/artPeices");
 app.use("/artPeices", artRouter);
-const thoughtsRouter = require("./routes/artThoughts");
-app.use("/artThoughts", thoughtsRouter);
+
 
 app.listen(PORT, () => {
   console.log("Server started");
